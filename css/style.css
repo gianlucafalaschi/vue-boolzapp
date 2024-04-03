@@ -81,7 +81,7 @@ body {
 /* left column bottom */
 .left-column-bottom {
     width: 100%;
-    height: calc(80vh - 50px);
+    height: calc(90vh - 50px);
     overflow-y: hidden;
 }
 
@@ -140,6 +140,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+.right-column-central {
+    width: 100%;
+    height: calc(90vh - 100px);
+    overflow-y: auto;
 }
 
 .text-footer {

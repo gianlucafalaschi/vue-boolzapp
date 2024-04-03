@@ -197,6 +197,15 @@ body {
     padding: 10px;
 }
 
+.right-head .info{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-head .last-access {
+    color: #B1B1B1;
+}
+
 .right-column-central {
     width: 100%;
     height: calc(90vh - 100px);

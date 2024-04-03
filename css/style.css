@@ -1,0 +1,17 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    height: 100vh;
+    background-color: #D8DBD5;
+}
+
+.background-top {
+    height: 100px;
+    background-color: #009688;
+}

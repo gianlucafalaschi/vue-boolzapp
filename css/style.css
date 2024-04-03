@@ -36,9 +36,9 @@ body {
 /* left column  */
 .left-col {
     width: 40%;
-    background-color: beige;
     flex-shrink: 0;
     flex-grow: 0;
+    background-color: white;
 }
 
 

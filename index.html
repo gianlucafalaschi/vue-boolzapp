@@ -52,7 +52,7 @@
                                 <li v-for="singleContact in contacts">
                                     <div class="user">
                                         <div class="contacts-image-container">
-                                            <img src="img/avatar_io.jpg" alt="user-photo">
+                                            <img :src="'img/avatar'+ singleContact.avatar + '.jpg' " alt="user-photo">
                                         </div>
                                         <span class="user-name">{{singleContact.name}}</span>
                                     </div>

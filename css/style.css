@@ -212,10 +212,37 @@ body {
     overflow-y: auto;
 }
 
-.text-footer {
+.footer {
     width: 100%;
     height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color:#F3EEEA ;
     overflow-y: hidden;
+    padding: 0 20px;
+}
+
+.footer-emoji {
+    width: 10%;
+    color: #6B7376;
+}
+
+.footer-message {
+    width: 80%;
+}
+
+.footer-icon {
+    width: 10%;
+    text-align: right;
+    color: #6B7376;
+}
+
+.footer input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+
 }
 

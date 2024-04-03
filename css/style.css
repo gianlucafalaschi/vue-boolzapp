@@ -78,6 +78,13 @@ body {
 
 }
 
+/* left column bottom */
+.left-column-bottom {
+    width: 100%;
+    height: calc(80vh - 50px);
+    overflow-y: hidden;
+}
+
 /* notification */
 
 .notification {
@@ -92,7 +99,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: white;
     overflow: hidden;
     margin-right: 8px;
     display: flex;
@@ -100,10 +107,9 @@ body {
     align-items: center;
 }
 
-.contacts-image-container i {
+.notification .contacts-image-container i {
     width: 100%;
-    display: flex;
-    
+    color:#8EDAFC ;
 }
 
 

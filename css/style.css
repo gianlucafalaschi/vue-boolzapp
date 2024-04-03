@@ -212,14 +212,41 @@ body {
     display: flex;
 }
 
-.sent-messages-col {
+.messages-col {
+    width: 100%;
     padding: 50px;
-    border: 1px dashed black;
+    display: flex;
+    flex-direction: column;
 }
 
-.received-messages-col {
-    padding: 50px;
-    border: 1px dashed black;
+.received-box {
+    width: 40%;
+    align-self: flex-end;
+    background-color: #D5F9BA;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+}
+
+.sent-box {
+    width: 40%;
+    align-self: flex-start;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+}
+
+.message-text {
+    padding: 10px;
+}
+
+.message-time {
+    color:#B1B1B1;
+    align-self: flex-end;
+    padding: 2px;
 }
 
 /* FOOTER */

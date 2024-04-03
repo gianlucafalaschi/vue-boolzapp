@@ -209,9 +209,18 @@ body {
     height: calc(90vh - 100px);
     overflow-y: auto;
     background-image:url(../img/mine.jpg);
+    display: flex;
 }
 
+.sent-messages-col {
+    padding: 50px;
+    border: 1px dashed black;
+}
 
+.received-messages-col {
+    padding: 50px;
+    border: 1px dashed black;
+}
 
 /* FOOTER */
 .footer {

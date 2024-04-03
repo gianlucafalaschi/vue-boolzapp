@@ -49,48 +49,12 @@
                         <!-- all contacts -->
                         <div class="all-contacts">
                             <ul>
-                                <li>
+                                <li v-for="singleContact in contacts">
                                     <div class="user">
                                         <div class="contacts-image-container">
                                             <img src="img/avatar_io.jpg" alt="user-photo">
                                         </div>
-                                        <span class="user-name">Sofia</span>
-                                    </div>
-                                    <div class="time"><small>12:00</small></div>
-                                </li>
-                                <li>
-                                    <div class="user">
-                                        <div class="contacts-image-container">
-                                            <img src="img/avatar_io.jpg" alt="user-photo">
-                                        </div>
-                                        <span class="user-name">Sofia</span>
-                                    </div>
-                                    <div class="time"><small>12:00</small></div>
-                                </li>
-                                <li>
-                                    <div class="user">
-                                        <div class="contacts-image-container">
-                                            <img src="img/avatar_io.jpg" alt="user-photo">
-                                        </div>
-                                        <span class="user-name">Sofia</span>
-                                    </div>
-                                    <div class="time"><small>12:00</small></div>
-                                </li>
-                                <li>
-                                    <div class="user">
-                                        <div class="contacts-image-container">
-                                            <img src="img/avatar_io.jpg" alt="user-photo">
-                                        </div>
-                                        <span class="user-name">Sofia</span>
-                                    </div>
-                                    <div class="time"><small>12:00</small></div>
-                                </li>
-                                <li>
-                                    <div class="user">
-                                        <div class="contacts-image-container">
-                                            <img src="img/avatar_io.jpg" alt="user-photo">
-                                        </div>
-                                        <span class="user-name">Sofia</span>
+                                        <span class="user-name">{{singleContact.name}}</span>
                                     </div>
                                     <div class="time"><small>12:00</small></div>
                                 </li>

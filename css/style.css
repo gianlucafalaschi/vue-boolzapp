@@ -113,7 +113,7 @@ body {
     color:#8EDAFC ;
 }
 
-
+/* contact search */
 .find {
     width: 100%;
     height: 35px;
@@ -146,11 +146,37 @@ body {
     color: #B1B1B1;
     font-size: 12px;
 }
+/* all contacts */
 
 .all-contacts {
     width: 100%;
     height: calc(100% - 110px);
     overflow-y: auto;
+}
+
+.all-contacts .user {
+    padding: 5px 5px 5px 10px;
+    display: flex;
+    
+}
+
+.all-contacts .user span.user-name{
+    align-self: flex-start;
+}
+
+.all-contacts li {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #E9EBEB;
+}
+
+.all-contacts .time {
+    padding: 5px;
+    color: #B1B1B1;
+}
+
+.contacts-image-container img{
+    width: 100%;
 }
 
 /* right column */

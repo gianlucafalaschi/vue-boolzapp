@@ -37,3 +37,13 @@
     background-color: pink;
 }
 
+.left-head {
+    background-color: #EAEAEA;
+    border: 1px dashed black;
+    height: 50px;
+}
+.right-head {
+    background-color: #EAEAEA;
+    border: 1px dashed black;
+    height: 50px;
+}

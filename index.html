@@ -49,7 +49,7 @@
                         <!-- all contacts -->
                         <div class="all-contacts">
                             <ul>
-                                <li v-for="(element, index) in contacts" @click="showMessages(index)">
+                                <li v-for="(element, index) in contacts" :class="{'active' : index == activeUser}" @click="showMessages(index)">
                                     <div class="user">
                                         <div class="contacts-image-container">
                                             <img :src="'img/avatar'+ element.avatar + '.jpg' " alt="user-photo">

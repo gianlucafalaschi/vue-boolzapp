@@ -234,12 +234,12 @@ body {
     margin: 4px 0;
 }
 
-.message-card.received {
+.message-card.sent {
     align-self: flex-end;
     background-color: #D5F9BA;
 }
 
-.message-card.sent {
+.message-card.received {
     align-self: flex-start;
     background-color: #FFFFFF;
 }

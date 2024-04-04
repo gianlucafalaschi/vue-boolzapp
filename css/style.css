@@ -14,6 +14,7 @@ body {
 
 .background {
     width: 100%;
+    min-width: 1000px;
     height: 100vh;
     background-color: #D8DBD5;
     position: relative;
@@ -219,25 +220,24 @@ body {
     flex-direction: column;
 }
 
-.received-box {
+.message-card {
     width: 40%;
-    align-self: flex-end;
-    background-color: #D5F9BA;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     margin: 4px 0;
 }
 
-.sent-box {
-    width: 40%;
+.message-card.received {
+    align-self: flex-end;
+    background-color: #D5F9BA;
+}
+
+.message-card.sent {
     align-self: flex-start;
     background-color: #FFFFFF;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    margin: 4px 0;
 }
+
 
 .message-text {
     padding: 10px;

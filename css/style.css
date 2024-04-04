@@ -170,6 +170,10 @@ body {
     border-top: 1px solid #E9EBEB;
 }
 
+.all-contacts li.active {
+   background-color:#E9EBEB ; 
+}
+
 .all-contacts .time {
     padding: 5px;
     color: #B1B1B1;
@@ -222,6 +226,7 @@ body {
 
 .message-card {
     width: 40%;
+    background-color: coral;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;

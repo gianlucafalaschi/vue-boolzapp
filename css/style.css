@@ -168,6 +168,7 @@ body {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #E9EBEB;
+    cursor: pointer;
 }
 
 .all-contacts li.active {
@@ -214,7 +215,7 @@ body {
     height: calc(90vh - 100px);
     overflow-y: auto;
     background-image:url(../img/mine.jpg);
-    display: flex;
+    /* display: flex; */
 }
 
 .messages-col {

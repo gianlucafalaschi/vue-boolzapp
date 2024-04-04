@@ -87,6 +87,9 @@ createApp({
         };
     }, 
     methods: {
+      showMessages(index){
+        this.activeUser = index;
+      }
     }
 }).mount('#app');
 

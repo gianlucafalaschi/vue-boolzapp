@@ -49,7 +49,7 @@
                         <!-- all contacts -->
                         <div class="all-contacts">
                             <ul>
-                                <li v-for="(singleContact, index) in contacts">
+                                <li v-for="(singleContact, index) in contacts" @click="showMessages(index)">
                                     <div class="user">
                                         <div class="contacts-image-container">
                                             <img :src="'img/avatar'+ singleContact.avatar + '.jpg' " alt="user-photo">
@@ -83,36 +83,24 @@
                         </div>
                     </div>
                     <div class="right-column-central">
-                        <div class="messages-col">
-                            <div v-for="(singleMessage, index) in contacts[0].messages" class="message-card received">
-                                <div class="message-text">{{singleMessage.message}}</div>
-                                <div class="message-time"><small>{{singleMessage.date}}</small></div>
+                        <template v-for="(singleContact, contactIndex) in contacts" :key="contactIndex" >
+                            <div  class="messages-col">
+                                <!-- <div v-for="(singleMessage, index) in contacts[0].messages" class="message-card received">
+                                    <div class="message-text">{{singleMessage.message}}</div>
+                                    <div class="message-time"><small>{{singleMessage.date}}</small></div>
+                                </div> -->
+                                <template v-for="(singleMessage, indexMessage) in singleContact.messages">
+                                    <div   class="message-card sent">
+                                        <div class="message-text">{{singleMessage.message}}</div>
+                                        <div class="message-time"><small>15:50</small></div>
+                                    </div>
+                                    <!-- <div  class="message-card received">
+                                        <div class="message-text">{{singleMessage.message}}</div>
+                                        <div class="message-time"><small>16:15</small></div>
+                                    </div> -->
+                                </template>
                             </div>
-                            <!-- <div class="message-card received">
-                                <div class="message-text">Ricordati di stendere i panni</div>
-                                <div class="message-time"><small>15:50</small></div>
-                            </div>
-                            <div class="message-card sent">
-                                <div class="message-text">Hai portato a spasso il cane?</div>
-                                <div class="message-time"><small>16:15</small></div>
-                            </div>
-                            <div class="message-card sent">
-                                <div class="message-text">Hai portato a spasso il cane?</div>
-                                <div class="message-time"><small>16:15</small></div>
-                            </div>
-                            <div class="message-card sent">
-                                <div class="message-text">Hai portato a spasso il cane?</div>
-                                <div class="message-time"><small>16:15</small></div>
-                            </div>
-                            <div class="message-card sent">
-                                <div class="message-text">Hai portato a spasso il cane?</div>
-                                <div class="message-time"><small>16:15</small></div>
-                            </div>
-                            <div class="message-card sent">
-                                <div class="message-text">Hai portato a spasso il cane?</div>
-                                <div class="message-time"><small>16:15</small></div>
-                            </div> -->
-                        </div>
+                        </template>
                     </div>
                     
                     <div class="footer">

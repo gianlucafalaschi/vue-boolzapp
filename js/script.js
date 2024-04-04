@@ -93,8 +93,18 @@ createApp({
         this.activeUser = index;
         console.log(this.activeUser);
       },
-      addNewMessage(textToadd){
-        alert(textToadd);
+      addNewMessage(){
+        //aggiungere un nuovo messaggio all'array
+        //Creare un nuovo oggetto con tutte le chiavi
+        const newMessage = {
+          date: '10/01/2020 15:30:55',
+          message: this.newMessageText,
+          status: 'sent'
+        };
+        console.log(newMessage);
+        // aggiungo il nuovo messaggio a this.contacts.messages
+        this.contacts[this.activeUser].messages.push(newMessage);
+        console.log(this.contacts);
       }
     }
 }).mount('#app');

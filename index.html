@@ -89,9 +89,9 @@
                                     <div class="message-text">{{singleMessage.message}}</div>
                                     <div class="message-time"><small>{{singleMessage.date}}</small></div>
                                 </div> -->
-                                <template v-for="(singleMessage, indexMessage) in singleContact[activeUser].messages">
+                                <template v-for="(singleMessage, indexMessage) in singleContact.messages">
                                     <div   class="message-card" :class="singleMessage.status">
-                                        <div class="message-text">{{singleMessage[activeUser].message}}</div>
+                                        <div class="message-text">{{singleMessage.message}}</div>
                                         <div class="message-time"><small>15:50</small></div>
                                     </div>
                                     <!-- <div  class="message-card received">

@@ -49,12 +49,12 @@
                         <!-- all contacts -->
                         <div class="all-contacts">
                             <ul>
-                                <li v-for="(singleContact, index) in contacts" @click="showMessages(index)">
+                                <li v-for="(element, index) in contacts" @click="showMessages(index)">
                                     <div class="user">
                                         <div class="contacts-image-container">
-                                            <img :src="'img/avatar'+ singleContact.avatar + '.jpg' " alt="user-photo">
+                                            <img :src="'img/avatar'+ element.avatar + '.jpg' " alt="user-photo">
                                         </div>
-                                        <span class="user-name">{{singleContact.name}}</span>
+                                        <span class="user-name">{{element.name}}</span>
                                     </div>
                                     <div class="time"><small>12:00</small></div>
                                 </li>

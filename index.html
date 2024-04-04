@@ -68,10 +68,10 @@
                     <div class="right-head">
                         <div class="user">
                             <div class="user-image-container">
-                                <img src="img/avatar_io.jpg" alt="user-photo">
+                                <img :src="'img/avatar' + contacts[activeUser].avatar + '.jpg'" alt="user-photo">
                             </div>
                             <div class="info">
-                                <span class="user-name">Sofia</span>
+                                <span class="user-name">{{contacts[activeUser].name}}</span>
                                 <span class="last-access"><small>Ultimo accesso oggi alle 12:00</small></span>
                             </div>
                             
@@ -83,24 +83,17 @@
                         </div>
                     </div>
                     <div class="right-column-central">
-                        <!-- <template v-for="(singleContact, contactIndex) in contacts" :key="contactIndex" > -->
                             <div  class="messages-col">
-                                <!-- <div v-for="(singleMessage, index) in contacts[0].messages" class="message-card received">
-                                    <div class="message-text">{{singleMessage.message}}</div>
-                                    <div class="message-time"><small>{{singleMessage.date}}</small></div>
-                                </div> -->
+                                
                                 <template v-for="(singleMessage, indexMessage) in contacts[activeUser].messages">
                                     <div   class="message-card" :class="singleMessage.status">
                                         <div class="message-text">{{singleMessage.message}}</div>
                                         <div class="message-time"><small>15:50</small></div>
                                     </div>
-                                    <!-- <div  class="message-card received">
-                                        <div class="message-text">{{singleMessage.message}}</div>
-                                        <div class="message-time"><small>16:15</small></div>
-                                    </div> -->
+                                    
                                 </template>
                             </div>
-                        <!-- </template> -->
+                        
                     </div>
                     
                     <div class="footer">

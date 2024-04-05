@@ -110,6 +110,7 @@ createApp({
         }
       },
       messageAnswer(){
+        
         const newAnswer = {
           date: '10/01/2020 15:30:55',
           message: 'ok',
@@ -117,9 +118,11 @@ createApp({
         };
         console.log('funzione messageAnswer chiamata');
         // aggiungo la nuova risposta a this.contacts[this.activeUser].messages
-        // la nuova risposta va' all'indice 1 dell'array. Vengono rimossi 0 elementi dall'array
-        this.contacts[this.activeUser].messages.push(newAnswer); 
-      }
+        setTimeout(() => {
+          this.contacts[this.activeUser].messages.push(newAnswer);
+        }, 3000);
+         
+      },
     }
 }).mount('#app');
 

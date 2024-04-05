@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -99,7 +100,7 @@
                     <div class="footer">
                         <div class="footer-emoji"><i class="fa-regular fa-face-smile"></i></div>
                         <div class="footer-message">
-                            <input type="writing-box" placeholder="Scrivi un messaggio" v-model="newMessageText" @keyup.enter="addNewMessage(), messageAnswer()">  
+                            <input type="writing-box" placeholder="Scrivi un messaggio" v-model="newMessageText" @keyup.enter="addNewMessage(), messageAnswer(), getCurrentDate()">  
                         </div>
                         <div class="footer-icon"><i class="fa-solid fa-microphone"></i></div>
                     </div>
@@ -109,7 +110,7 @@
     </div>
 
 
-
+    <script type="text/javascript" src="js/test.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

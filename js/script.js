@@ -1,5 +1,7 @@
 const { createApp } = Vue;
 
+const dt = luxon.DateTime;
+
 createApp({
     data() {
         return {
@@ -86,6 +88,8 @@ createApp({
             activeUser: 0,
             
             newMessageText: '',
+
+            date: '',
         };
     }, 
     methods: {
@@ -109,6 +113,10 @@ createApp({
         console.log(this.contacts);
         }
       },
+      getCurrentDate(){
+        this.date = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+        console.log(this.date);
+      },
       messageAnswer(){
         
         const newAnswer = {
@@ -123,6 +131,7 @@ createApp({
         }, 3000);
          
       },
+
     }
 }).mount('#app');
 

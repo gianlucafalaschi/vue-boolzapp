@@ -103,11 +103,21 @@ createApp({
           status: 'sent'
         };
         console.log(newMessage);
-        // aggiungo il nuovo messaggio a this.contacts.messages
+        // aggiungo il nuovo messaggio a this.contacts[this.activeUser].messages
         this.contacts[this.activeUser].messages.unshift(newMessage);
         this.newMessageText = '';
         console.log(this.contacts);
         }
+      },
+      messageAnswer(){
+        const newAnswer = {
+          date: '10/01/2020 15:30:55',
+          message: 'ok',
+          status: 'received',
+        };
+        console.log('funzione messageAnswer chiamata');
+        // aggiungo la nuova risposta a this.contacts.messages
+        this.contacts[this.activeUser].messages.unshift(newAnswer);
       }
     }
 }).mount('#app');

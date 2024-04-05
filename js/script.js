@@ -94,6 +94,7 @@ createApp({
         console.log(this.activeUser);
       },
       addNewMessage(){
+        if(this.newMessageText.length > 0) {
         //aggiungere un nuovo messaggio all'array
         //Creare un nuovo oggetto con tutte le chiavi
         const newMessage = {
@@ -106,6 +107,7 @@ createApp({
         this.contacts[this.activeUser].messages.unshift(newMessage);
         this.newMessageText = '';
         console.log(this.contacts);
+        }
       }
     }
 }).mount('#app');

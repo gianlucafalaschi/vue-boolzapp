@@ -104,7 +104,7 @@ createApp({
         };
         console.log(newMessage);
         // aggiungo il nuovo messaggio a this.contacts[this.activeUser].messages
-        this.contacts[this.activeUser].messages.unshift(newMessage);
+        this.contacts[this.activeUser].messages.push(newMessage);
         this.newMessageText = '';
         console.log(this.contacts);
         }
@@ -118,7 +118,7 @@ createApp({
         console.log('funzione messageAnswer chiamata');
         // aggiungo la nuova risposta a this.contacts[this.activeUser].messages
         // la nuova risposta va' all'indice 1 dell'array. Vengono rimossi 0 elementi dall'array
-        this.contacts[this.activeUser].messages.splice(1,0,newAnswer); 
+        this.contacts[this.activeUser].messages.push(newAnswer); 
       }
     }
 }).mount('#app');

@@ -97,6 +97,10 @@ createApp({
         this.activeUser = index;
         console.log(this.activeUser);
       },
+      getCurrentDate(){
+        this.currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+        console.log(this.currentDate);
+      },
       addNewMessage(){
         if(this.newMessageText.length > 0) {
         //aggiungere un nuovo messaggio all'array
@@ -113,20 +117,18 @@ createApp({
         console.log(this.contacts);
         }
       },
-      getCurrentDate(){
-        this.currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-        console.log(this.currentDate);
-      },
+      
       messageAnswer(){
         
-        const newAnswer = {
-          date: this.currentDate,
-          message: 'ok',
-          status: 'received',
-        };
-        console.log('funzione messageAnswer chiamata');
+        
+        /* console.log('funzione messageAnswer chiamata'); */
         // aggiungo la nuova risposta a this.contacts[this.activeUser].messages
         setTimeout(() => {
+          const newAnswer = {
+            date: this.currentDate,
+            message: 'ok',
+            status: 'received',
+          };
           this.contacts[this.activeUser].messages.push(newAnswer);
         }, 3000);
          

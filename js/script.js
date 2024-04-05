@@ -89,7 +89,7 @@ createApp({
             
             newMessageText: '',
 
-            date: '',
+            currentDate: '',
         };
     }, 
     methods: {
@@ -102,7 +102,7 @@ createApp({
         //aggiungere un nuovo messaggio all'array
         //Creare un nuovo oggetto con tutte le chiavi
         const newMessage = {
-          date: '10/01/2020 15:30:55',
+          date: this.currentDate,
           message: this.newMessageText,
           status: 'sent'
         };
@@ -114,13 +114,13 @@ createApp({
         }
       },
       getCurrentDate(){
-        this.date = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-        console.log(this.date);
+        this.currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+        console.log(this.currentDate);
       },
       messageAnswer(){
         
         const newAnswer = {
-          date: '10/01/2020 15:30:55',
+          date: this.currentDate,
           message: 'ok',
           status: 'received',
         };

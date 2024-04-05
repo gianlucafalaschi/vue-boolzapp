@@ -90,6 +90,7 @@ createApp({
             newMessageText: '',
 
             currentDate: '',
+
         };
     }, 
     methods: {
@@ -97,12 +98,10 @@ createApp({
         this.activeUser = index;
         console.log(this.activeUser);
       },
-      getCurrentDate(){
-        this.currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-        console.log(this.currentDate);
-      },
+      
       addNewMessage(){
         if(this.newMessageText.length > 0) {
+          this.currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
         //aggiungere un nuovo messaggio all'array
         //Creare un nuovo oggetto con tutte le chiavi
         const newMessage = {
@@ -124,6 +123,7 @@ createApp({
         /* console.log('funzione messageAnswer chiamata'); */
         // aggiungo la nuova risposta a this.contacts[this.activeUser].messages
         setTimeout(() => {
+          this.currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
           const newAnswer = {
             date: this.currentDate,
             message: 'ok',

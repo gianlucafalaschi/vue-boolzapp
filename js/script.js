@@ -116,8 +116,9 @@ createApp({
           status: 'received',
         };
         console.log('funzione messageAnswer chiamata');
-        // aggiungo la nuova risposta a this.contacts.messages
-        this.contacts[this.activeUser].messages.unshift(newAnswer);
+        // aggiungo la nuova risposta a this.contacts[this.activeUser].messages
+        // la nuova risposta va' all'indice 1 dell'array. Vengono rimossi 0 elementi dall'array
+        this.contacts[this.activeUser].messages.splice(1,0,newAnswer); 
       }
     }
 }).mount('#app');

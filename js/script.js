@@ -103,7 +103,8 @@ createApp({
         };
         console.log(newMessage);
         // aggiungo il nuovo messaggio a this.contacts.messages
-        this.contacts[this.activeUser].messages.push(newMessage);
+        this.contacts[this.activeUser].messages.unshift(newMessage);
+        this.newMessageText = '';
         console.log(this.contacts);
       }
     }

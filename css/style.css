@@ -230,6 +230,7 @@ body {
     background-color: coral;
     border-radius: 8px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 4px 0;
 }
@@ -246,6 +247,7 @@ body {
 
 
 .message-text {
+    width: 100%;
     padding: 10px;
 }
 

@@ -88,7 +88,7 @@
                                 <template v-for="(singleMessage, indexMessage) in contacts[activeUser].messages">
                                     <div   class="message-card" :class="singleMessage.status">
                                         <div class="message-text">{{singleMessage.message}}</div>
-                                        <div class="message-time"><small>15:50</small></div>
+                                        <div class="message-time"><small>{{singleMessage.date}}</small></div>
                                     </div>
                                     
                                 </template>

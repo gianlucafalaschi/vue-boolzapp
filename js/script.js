@@ -145,8 +145,16 @@ createApp({
           let nameLowerCase = person.name.toLowerCase();
           console.log(nameLowerCase);
           // confronto se una stringa ne contiene un'altra, se no -> visible: true diventa false
-          let letterCheck = nameLowerCase.includes(this.searchInput,0);
-          console.log(letterCheck);
+          let nameIsIncluded = nameLowerCase.includes(this.searchInput,0);
+           console.log("nome e' incluso",nameIsIncluded);
+           if(nameIsIncluded == true){
+                person.visible = true;
+                
+              }else {
+                person.visible = false;
+                
+              } 
+              console.log("variabile visible",person.visible);
 
       });
       },

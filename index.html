@@ -16,7 +16,7 @@
             <div class="background-bottom"></div>
             <!-- MAIN CONTAINER -->
             <div class="app-container">
-                <!-- left column -->
+                <!-- left column head -->
                 <div class="left-col">
                     <div class="left-head">
                         <div class="user">
@@ -43,6 +43,7 @@
                                 <div><small>Attiva notifiche desktop</small></div>
                             </div>
                         </div>
+                        <!-- find contacts -->
                         <div class="find">
                             <span class="find-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
                             <input type="text" v-model="searchInput"  placeholder="Cerca o inizia una nuova chat" @keyUp="filterContacts()">
@@ -50,7 +51,7 @@
                         <!-- all contacts -->
                         <div class="all-contacts">
                             <ul>
-                                <li v-for="(element, index) in contacts" :class="{'active' : index == activeUser}" @click="showMessages(index)">
+                                <li v-for="(element, index) in contacts" v-show="element.visible == true"  :class="{'active' : index == activeUser}" @click="showMessages(index)">
                                     <div class="user">
                                         <div class="contacts-image-container">
                                             <img :src="'img/avatar'+ element.avatar + '.jpg' " alt="user-photo">

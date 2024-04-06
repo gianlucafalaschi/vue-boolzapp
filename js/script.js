@@ -135,8 +135,20 @@ createApp({
         }, 3000);
          
       },
-      filterUser(){
+      filterContacts(){
+        // trasformo le lettere inserite dall'utente in minuscole
+        this.searchInput = this.searchInput.toLowerCase();
+        console.log(this.searchInput);
+        // per ogni contatto nell'oggetto contacts prendo il nome e trasformo le lettere in minuscole
+        this.contacts.forEach((person, index) => {
+          
+          let nameLowerCase = person.name.toLowerCase();
+          console.log(nameLowerCase);
+          // confronto se una stringa ne contiene un'altra, se no -> visible: true diventa false
+          let letterCheck = nameLowerCase.includes(this.searchInput,0);
+          console.log(letterCheck);
 
+      });
       },
 
     }

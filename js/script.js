@@ -168,3 +168,9 @@ createApp({
 //visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> 
 // Scrivo “mar” rimangono solo Marco e Martina)
 
+// prendo le lettere dell'input, le rendo tutte minuscole
+// le confronto (confronto stringhe "includes?) con tutte le lettere di tutti i contacts.name (anche queste tutte minuscole)
+
+// se le lettere non sono presenti la variabile visible diventa False
+
+// con la variabile visible a Falso il contatto non viene mostrato (uso v-if)

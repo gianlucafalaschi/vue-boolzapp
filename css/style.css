@@ -227,12 +227,12 @@ body {
 
 .message-card {
     width: 40%;
-    background-color: coral;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 4px 0;
+    word-wrap: break-word;
 }
 
 .message-card.sent {
